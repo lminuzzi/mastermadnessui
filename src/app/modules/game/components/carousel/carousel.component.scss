@@ -1,0 +1,68 @@
+.carousel-content {
+  perspective: 2500;
+  -webkit-perspective: 2500;
+  width: 800px;
+  margin: 50px auto 0 auto;
+  perspective-origin: 50% 150px;
+  -webkit-perspective-origin: 50% 150px;
+  transition: perspective, 1s;
+  -o-transition: -o-perspective, 1s;
+  -moz-transition: -moz-perspective, 1s;
+  -webkit-transition: -webkit-perspective, 1s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+    -o-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+    -o-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    -moz-transform: rotateY(-360deg);
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+.carousel-image {
+  margin: 0 auto;
+  height: 300px;
+  width: 400px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  animation: spin 24s infinite linear;
+  -moz-animation: spin 24s infinite linear;
+  -o-animation: spin 24s infinite linear;
+  -webkit-animation: spin 24s infinite linear;
+}
+
+.image {
+  position: absolute;
+  height: 300px;
+  width: 400px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 20em;
+  //background-color: rgba(0,0,0,0.6);
+  //color: #fff;
+}
+
+img {
+  border-radius: 25px;
+}
+
+@for $i from 1 through 6 {
+  $translateZ: 300;
+  $rotDeg: 60 * ($i - 1);
+  .carousel-image > .i#{$i} {
+    @if ($i > 1) {
+      transform: rotateY(#{$rotDeg}deg) translateZ(#{$translateZ}px);
+    } @else {
+      transform: translateZ(#{$translateZ}px);
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<div class="carousel-content">
+    <div class="carousel-image">
+        <div *ngFor="let imgName of imagesNames; let index = index" class="image i{{index+1}}">
+            <img src="{{srcImages}}/{{imgName}}" >
+        </div>
+    </div>
+</div>

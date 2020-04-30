@@ -11,7 +11,7 @@
   -webkit-transition: -webkit-perspective, 1s;
 }
 
-@-webkit-keyframes spin {
+@keyframes spin {
   from {
     transform: rotateY(0);
     -o-transform: rotateY(0);

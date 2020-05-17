@@ -1,3 +1,8 @@
-<p>choose-name works!</p>
-<app-carousel [imagesNames]="images" [srcImages]="imgRootSource"></app-carousel>
-
+<div class="name-component">
+    <div>
+        <app-carousel [imagesNames]="images" [srcImages]="imgRootSource"></app-carousel>
+    </div>
+    <div class="grid-select">
+        <app-name-grid-select [names]="listOfNames"></app-name-grid-select>
+    </div>
+</div>

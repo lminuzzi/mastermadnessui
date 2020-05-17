@@ -1,0 +1,28 @@
+.name-component {
+    //background-image: url('/assets/images/background.jpg') ;
+    //background-size: cover;
+    min-width: 110vh;
+    position: relative;
+}
+
+.name-component::after {
+    content: "";
+    background-image: url('/assets/images/background.jpg') ;
+    opacity: 0.6;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    min-width: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.grid-select {
+    text-align: center; 
+    width: 100%; 
+    min-width: 110vh;
+}
